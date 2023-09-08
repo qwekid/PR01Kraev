@@ -23,14 +23,14 @@ var2=$(bc<<<"scale=1;$a*$a+$b*$b")
 var3=$(expr "s($alpha)" | bc -l)
 var4=$(expr "c($alpha)" | bc -l)
 var5=$(bc<<<"scale=3;var3/var4")
-S=$(bc<<<"scale=1;var1*var2*var5")
+S=$(bc<<<"scale=1;$var1*$var2*$var5")
 
 echo "площадь"
 echo $var6
 var1=$a-$b
 var2=$(bc<<<"scale=3;$var1/$var3")
 var5=$(bc<<<"scale=3;$var2*$var4")
-p=$(bc<<<"scale=3;a+b+var2+var3")
+p=$(bc<<<"scale=3;$a+$b+$var2+$var3")
 echo "периметр"
 echo $p
 
